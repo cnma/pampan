@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pamela Pan, Tencent Large Customer Sales Consultant." />
+    <meta name="description" content="Pamela Pan，腾讯大客户销售。" />
     <meta name="keywords" content="Pamela Pan, Tencent, Marketing, Sales, 腾讯, 市场, 销售" />
     <meta name="author" content="Pamela Pan (me@pampan.cn)" />
     <title>Pamela Pan</title>
@@ -43,31 +43,36 @@
           opacity: 1;
         }
       }
-      main {
+      div {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding: 24px 36px;
         width: 80%;
         max-width: 420px;
         height: 240px;
         border-radius: 20px;
         color: #fff;
         background: linear-gradient(325deg, #cc00cc 0%, #ff8c00 100%);
+        box-shadow: 20px 20px 40px -20px rgba(0, 0, 0, 0.5);
         overflow: hidden;
         animation-delay: 0s;
         animation-duration: 1s;
         animation-name: card-in;
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
-        box-shadow: 20px 20px 40px -20px rgba(0, 0, 0, 0.5);
       }
-      div {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        flex-flow: column nowrap;
-        justify-content: center;
-        padding: 24px 36px;
+      div::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-        background-size: 36px 36px;
         background-position: -2px -2px;
+        background-size: 36px 36px;
       }
       h1 {
         margin: 0;
@@ -91,12 +96,10 @@
     </style>
   </head>
   <body>
-    <main>
-      <div>
-        <h1>Pamela Pan</h1>
-        <h2>大客户销售</h2>
-        <h3>&horbar;&horbar; 腾讯(北京) &horbar;&horbar;</h3>
-      </div>
-    </main>
+    <div>
+      <h1>Pamela Pan</h1>
+      <h2>大客户销售</h2>
+      <h3>&horbar;&horbar; 腾讯(北京) &horbar;&horbar;</h3>
+    </div>
   </body>
 </html>
